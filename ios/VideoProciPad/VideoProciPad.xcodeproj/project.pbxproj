@@ -308,6 +308,7 @@
 				28579B311A23C06100B1710F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
