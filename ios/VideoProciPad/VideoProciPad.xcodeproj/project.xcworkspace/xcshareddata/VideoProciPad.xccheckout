@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>84FB9A8E-3C58-493A-9506-7D009DA3E58C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>VideoProciPad</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>76620173-3099-4DE6-B6D8-836FE54CCE66</key>
+		<string>ssh://github.com/internaut/project-templates.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios/VideoProciPad/VideoProciPad.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>76620173-3099-4DE6-B6D8-836FE54CCE66</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/internaut/project-templates.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>76620173-3099-4DE6-B6D8-836FE54CCE66</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>76620173-3099-4DE6-B6D8-836FE54CCE66</string>
+			<key>IDESourceControlWCCName</key>
+			<string>project-templates</string>
+		</dict>
+	</array>
+</dict>
+</plist>
