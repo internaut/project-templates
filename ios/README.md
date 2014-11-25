@@ -6,4 +6,5 @@ See [here](http://stackoverflow.com/questions/17744319/duplicate-and-rename-xcod
 
 Project | Description | XCode Version | iOS Target Version | Hardware Target | Other Notes
 ------- | ----------- | ------------- | ------------------ | --------------- | -----------
-StillImageProciPad | Simple image processing for still images | 5.1.1 | 7.1 | iPad | ARC disabled
+StillImageProciPad | Image processing for still images | 5.1.1 | 7.1 | iPad | ARC disabled
+VideoProciPad | Image processing with video camera access | 5.1.1 | 7.1 | iPad | ARC disabled
