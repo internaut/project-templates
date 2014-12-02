@@ -5,5 +5,5 @@ public class JNIImgProc {
 		System.loadLibrary("jni_img_proc");
 	}
 	
-	static public native double testFunc(double x, double y);
+	public native void grayscale(int[] pixels);
 }

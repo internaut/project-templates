@@ -25,9 +25,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        double result = JNIImgProc.testFunc(2.0, 4.5);
-        Log.d(TAG, "result is " + result);
-        
 		imgView = (ImageView)findViewById(R.id.img_view);
 		
 		origImgBm = BitmapFactory.decodeResource(getResources(), R.drawable.leafs_1024x786);
@@ -38,12 +35,23 @@ public class MainActivity extends Activity {
     }
 
 	private class ImageViewClickListener implements View.OnClickListener {
+		private JNIImgProc imgProc;
 		private boolean filtered;
 		private Bitmap bitmap;
+		private int bitmapW;
+		private int bitmapH;
+		private int bitmapData[];
+		
 		
 		public ImageViewClickListener(Bitmap bitmap) {
+			imgProc = new JNIImgProc();
+			bitmapW = bitmap.getWidth();
+			bitmapH = bitmap.getHeight();
+			bitmapData = new int[bitmapW * bitmapH];
+			bitmap.getPixels(bitmapData, 0, bitmapW, 0, 0, bitmapW, bitmapH);
+			
 			this.filtered = false;
-			this.bitmap = bitmap;
+			this.bitmap = bitmap;			
 		}
 		
 		@Override
@@ -53,11 +61,12 @@ public class MainActivity extends Activity {
 
 			if (!filtered) {
 				processedBm = Bitmap.createBitmap(
-						bitmap.getWidth(),
-						bitmap.getHeight(),
+						bitmapW,
+						bitmapH,
 						Bitmap.Config.ARGB_8888);
 				
-//				filter.filter(bitmap, filteredBitmap);
+				imgProc.grayscale(bitmapData);
+				processedBm.setPixels(bitmapData, 0, bitmapW, 0, 0, bitmapW, bitmapH);
 				
 				filtered = true;
 			} else {

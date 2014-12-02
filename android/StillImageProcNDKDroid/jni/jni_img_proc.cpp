@@ -1,2 +1,2 @@
-// the jni library MUST be included#include <jni.h>// the log lib is included#include <android/log.h>// usage of log#define LOGINFO(...) __android_log_print(ANDROID_LOG_INFO, "jni_img_proc", __VA_ARGS__)extern "C" {jdouble Java_net_mkonrad_stillimageprocndkdroid_JNIImgProc_testFunc(JNIEnv *env, jdouble x, jdouble y){	LOGINFO("testFunc called!");	return x + y;
-}}
+#include "jni_img_proc.h"JNIEXPORT void JNICALL Java_net_mkonrad_stillimageprocndkdroid_JNIImgProc_grayscale(JNIEnv *env, jobject obj, jintArray pixels) {	// lock memory and get pointer to pixels    jint *pxPtr = env->GetIntArrayElements(pixels, 0);    jint len = env->GetArrayLength(pixels);    if (!pxPtr) {    	LOGERR("failed to get pointer to pixel data");        return;    }    for (int i = 0; i < len; ++i) {        jint val = pxPtr[i];        pxPtr[i] = 0xFFFF00FF;    }    // release the memory    env->ReleaseIntArrayElements(pixels, pxPtr, 0);
+}
