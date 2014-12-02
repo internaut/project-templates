@@ -6,8 +6,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -79,6 +77,7 @@ public class MainActivity extends Activity {
 						Bitmap.Config.ARGB_8888);
 				
 				// run the native image processing function. data will be modified in-place
+				Log.i(TAG, "will run native image processing function...");
 				imgProc.grayscale(bitmapData);
 				
 				// set the processed image data for the result bitmap

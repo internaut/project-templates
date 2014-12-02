@@ -6,4 +6,6 @@
 **/bin/**
 **/obj/**
 **/libs/**/*.so
+**/libs/**/gdb.setup
+**/libs/**/gdbserver
 **/gen/**
