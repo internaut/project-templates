@@ -11,7 +11,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
-
+/**
+ * Project template for native image processing via JNI on Android.
+ * 
+ * MainActivity implements the simple user interaction: Touching the input image will run
+ * the native image processing function (grayscale conversion).
+ */
 public class MainActivity extends Activity {
 	private final String TAG = this.getClass().getSimpleName();
 	
@@ -27,26 +32,33 @@ public class MainActivity extends Activity {
         
 		imgView = (ImageView)findViewById(R.id.img_view);
 		
+		// create a bitmap of the input image
 		origImgBm = BitmapFactory.decodeResource(getResources(), R.drawable.leafs_1024x786);
+		
+		// set it as drawable for the image view
 		origImgBmDr = new BitmapDrawable(getResources(), origImgBm);
 		imgView.setImageDrawable(origImgBmDr);
 		
+		// set the "on click" event listener
 		imgView.setOnClickListener(new ImageViewClickListener(origImgBm));
     }
 
+    
 	private class ImageViewClickListener implements View.OnClickListener {
 		private JNIImgProc imgProc;
 		private boolean filtered;
 		private Bitmap bitmap;
 		private int bitmapW;
 		private int bitmapH;
-		private int bitmapData[];
-		
+		private int bitmapData[];	// pixel data if <bitmap> as ARGB int values
 		
 		public ImageViewClickListener(Bitmap bitmap) {
-			imgProc = new JNIImgProc();
+			imgProc = new JNIImgProc();	// native interface
+			
 			bitmapW = bitmap.getWidth();
 			bitmapH = bitmap.getHeight();
+			
+			// get the pixel data as ARGB int values
 			bitmapData = new int[bitmapW * bitmapH];
 			bitmap.getPixels(bitmapData, 0, bitmapW, 0, 0, bitmapW, bitmapH);
 			
@@ -60,12 +72,16 @@ public class MainActivity extends Activity {
 			Bitmap processedBm;
 
 			if (!filtered) {
+				// create a new empty bitmap for the result
 				processedBm = Bitmap.createBitmap(
 						bitmapW,
 						bitmapH,
 						Bitmap.Config.ARGB_8888);
 				
+				// run the native image processing function. data will be modified in-place
 				imgProc.grayscale(bitmapData);
+				
+				// set the processed image data for the result bitmap
 				processedBm.setPixels(bitmapData, 0, bitmapW, 0, 0, bitmapW, bitmapH);
 				
 				filtered = true;
@@ -74,8 +90,8 @@ public class MainActivity extends Activity {
 				filtered = false;
 			}
 
-			BitmapDrawable filteredBitmapDrawable = new BitmapDrawable(getResources(), processedBm);
-			
+			// update the image view
+			BitmapDrawable filteredBitmapDrawable = new BitmapDrawable(getResources(), processedBm);			
 			imgView.setImageDrawable(filteredBitmapDrawable);
 		}
 		

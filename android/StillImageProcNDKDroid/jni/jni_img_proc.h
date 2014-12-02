@@ -13,6 +13,11 @@
 
 extern "C" {
 
+/**
+ * Grayscale conversion function.
+ *
+ * Accepts an ARGB "int" array <pixels> and will modify this data in-place.
+ */
 JNIEXPORT void JNICALL Java_net_mkonrad_stillimageprocndkdroid_JNIImgProc_grayscale(JNIEnv *env, jobject obj, jintArray pixels);
 
 }
