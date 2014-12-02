@@ -1,0 +1,2 @@
+// the jni library MUST be included#include <jni.h>// the log lib is included#include <android/log.h>// usage of log#define LOGINFO(...) __android_log_print(ANDROID_LOG_INFO, "jni_img_proc", __VA_ARGS__)extern "C" {jdouble Java_net_mkonrad_stillimageprocndkdroid_JNIImgProc_testFunc(JNIEnv *env, jdouble x, jdouble y){	LOGINFO("testFunc called!");	return x + y;
+}}

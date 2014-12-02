@@ -4,4 +4,6 @@
 #eclise noise:
 
 **/bin/**
+**/obj/**
+**/libs/**
 **/gen/**
