@@ -296,21 +296,17 @@ public class MainActivity extends Activity {
 		}
 
 		@Override
-		public void onSurfaceTextureSizeChanged(SurfaceTexture surface,
-				int width, int height) {
-			// TODO Auto-generated method stub
-			
+		public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
+
 		}
 
 		@Override
 		public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
-			// TODO Auto-generated method stub
-			return false;
+			return true;
 		}
 
 		@Override
 		public void onSurfaceTextureUpdated(SurfaceTexture surface) {
-			// TODO Auto-generated method stub
 			
 		}
     }
