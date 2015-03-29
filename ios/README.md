@@ -8,3 +8,4 @@ Project | Description | XCode Version | iOS Target Version | Hardware Target | O
 ------- | ----------- | ------------- | ------------------ | --------------- | -----------
 StillImageProciPad | Image processing for still images | 5.1.1 | 7.1 | iPad | ARC disabled
 VideoProciPad | Image processing with video camera access | 5.1.1 | 7.1 | iPad | ARC disabled
+StaticLib | Static library with C source and header file directory structure | 6.2 | 8.2 | Universal | -
