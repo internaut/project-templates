@@ -1,6 +1,6 @@
 #ifndef STATICEXAMPLELIB_MODULE1_FUNCTIONS_H
 #define STATICEXAMPLELIB_MODULE1_FUNCTIONS_H
 
-void module1func(void);
+void staticexamplelib_module1func(void);
 
 #endif

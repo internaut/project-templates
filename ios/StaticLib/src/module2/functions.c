@@ -2,6 +2,6 @@
 
 #include <stdio.h>
 
-void module2func(void) {
-    printf("module2func() called!");
+void staticexamplelib_module2func(void) {
+    printf("module2func() called!\n");
 }
