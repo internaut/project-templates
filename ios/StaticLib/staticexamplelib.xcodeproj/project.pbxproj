@@ -1,0 +1,298 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28B9930C1AC833EE00B800B3 /* functions.c in Sources */ = {isa = PBXBuildFile; fileRef = 28B9930B1AC833EE00B800B3 /* functions.c */; };
+		28B9930E1AC8355A00B800B3 /* functions.c in Sources */ = {isa = PBXBuildFile; fileRef = 28B9930D1AC8355A00B800B3 /* functions.c */; };
+		28B993111AC8362000B800B3 /* module1 in Headers */ = {isa = PBXBuildFile; fileRef = 28B993071AC8310000B800B3 /* module1 */; settings = {ATTRIBUTES = (Public, ); }; };
+		28B993121AC8362300B800B3 /* module2 in Headers */ = {isa = PBXBuildFile; fileRef = 28B993081AC8310000B800B3 /* module2 */; settings = {ATTRIBUTES = (Public, ); }; };
+		28B993131AC8362600B800B3 /* staticexamplelib.h in Headers */ = {isa = PBXBuildFile; fileRef = 28B993091AC8310000B800B3 /* staticexamplelib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		286F53F31AC82580002D419D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		286F53F51AC82580002D419D /* libstaticexamplelib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libstaticexamplelib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		28B993071AC8310000B800B3 /* module1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = module1; sourceTree = "<group>"; };
+		28B993081AC8310000B800B3 /* module2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = module2; sourceTree = "<group>"; };
+		28B993091AC8310000B800B3 /* staticexamplelib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = staticexamplelib.h; sourceTree = "<group>"; };
+		28B9930B1AC833EE00B800B3 /* functions.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = functions.c; path = src/module1/functions.c; sourceTree = "<group>"; };
+		28B9930D1AC8355A00B800B3 /* functions.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = functions.c; path = src/module2/functions.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		286F53F21AC82580002D419D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		286F53EC1AC82580002D419D = {
+			isa = PBXGroup;
+			children = (
+				28B9930F1AC835B300B800B3 /* compilationfiles */,
+				28B992F91AC8293C00B800B3 /* src */,
+				286F53F61AC82580002D419D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		286F53F61AC82580002D419D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				286F53F51AC82580002D419D /* libstaticexamplelib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28B992F91AC8293C00B800B3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				28B993071AC8310000B800B3 /* module1 */,
+				28B993081AC8310000B800B3 /* module2 */,
+				28B993091AC8310000B800B3 /* staticexamplelib.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		28B9930F1AC835B300B800B3 /* compilationfiles */ = {
+			isa = PBXGroup;
+			children = (
+				28B9930D1AC8355A00B800B3 /* functions.c */,
+				28B9930B1AC833EE00B800B3 /* functions.c */,
+			);
+			name = compilationfiles;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		28B993101AC8361500B800B3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B993111AC8362000B800B3 /* module1 in Headers */,
+				28B993121AC8362300B800B3 /* module2 in Headers */,
+				28B993131AC8362600B800B3 /* staticexamplelib.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		286F53F41AC82580002D419D /* staticexamplelib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 286F54091AC82581002D419D /* Build configuration list for PBXNativeTarget "staticexamplelib" */;
+			buildPhases = (
+				286F53F11AC82580002D419D /* Sources */,
+				286F53F21AC82580002D419D /* Frameworks */,
+				286F53F31AC82580002D419D /* CopyFiles */,
+				28B993101AC8361500B800B3 /* Headers */,
+				28B993141AC838EC00B800B3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = staticexamplelib;
+			productName = staticexamplelib;
+			productReference = 286F53F51AC82580002D419D /* libstaticexamplelib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		286F53ED1AC82580002D419D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = mkonrad.net;
+				TargetAttributes = {
+					286F53F41AC82580002D419D = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = 286F53F01AC82580002D419D /* Build configuration list for PBXProject "staticexamplelib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 286F53EC1AC82580002D419D;
+			productRefGroup = 286F53F61AC82580002D419D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				286F53F41AC82580002D419D /* staticexamplelib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28B993141AC838EC00B800B3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"remove all *.c files from ${TARGET_BUILD_DIR}/include/${TARGET_NAME}\"\nfind ${TARGET_BUILD_DIR}/include/${TARGET_NAME}  -name '*.c' -exec rm -f {} \\;";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		286F53F11AC82580002D419D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B9930C1AC833EE00B800B3 /* functions.c in Sources */,
+				28B9930E1AC8355A00B800B3 /* functions.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		286F54071AC82581002D419D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PUBLIC_HEADERS_FOLDER_PATH = "include/${PRODUCT_NAME}";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		286F54081AC82581002D419D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PUBLIC_HEADERS_FOLDER_PATH = "include/${PRODUCT_NAME}";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		286F540A1AC82581002D419D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		286F540B1AC82581002D419D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		286F53F01AC82580002D419D /* Build configuration list for PBXProject "staticexamplelib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				286F54071AC82581002D419D /* Debug */,
+				286F54081AC82581002D419D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		286F54091AC82581002D419D /* Build configuration list for PBXNativeTarget "staticexamplelib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				286F540A1AC82581002D419D /* Debug */,
+				286F540B1AC82581002D419D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 286F53ED1AC82580002D419D /* Project object */;
+}
